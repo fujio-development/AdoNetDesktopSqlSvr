@@ -1,0 +1,343 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AdoNetDesktopSqlSvr
+</name>
+</assembly>
+<members>
+<member name="T:AdoNetDesktopSqlSvr.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.Config">
+ <summary>設定ファイルでアプリケーションをサポートする基底クラス</summary>
+ <remarks></remarks>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.DatapSqlSvr">
+ <summary>/*** .NET Framework Data Provider for SQLServer ***/
+ DAO(Datta Access Objcet)クラス</summary>
+ <remarks></remarks>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.DatapSqlSvr.pPropertySet">
+ <summary>構造体引数での接続パラメータをセット</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.ConecString">
+ <summary>ConnectionString設定</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.Open">
+ <summary>Microsoft SQLServerに接続します(外部設定ファイルを使わずに接続)
+ <para>※プロパティ値を基に接続します。最低でも事前にHost、Instance、Catalog、LoginModeプロパティに値を代入して下さい</para></summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.Open(AdoNetDesktopSqlSvr.DatapSqlSvr.pPropertySet)">
+ <summary>Microsoft SQLServerに接続します(外部設定ファイルを使わずに接続)
+ <para>※このメソッドの構造体引数で接続します</para></summary>
+ <param name="pSettei">接続文字列のパラメータ(構造体)</param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.Dispose">
+ <summary>Microsoft SQLServerに接続しているデータベースを閉じます
+ <para>IDisposableインターフェース実装メソッド</para></summary>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.Close">
+ <summary>Microsoft SQLServerに接続しているデータベースを閉じます</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.DataAdapter(System.String)">
+ <summary>与えられたSELECT文でSqlDataAdapterクラスで読み取り、DataTableで返します(外部設定ファイルを使わずに接続)
+ <para>※プロパティ値を基に接続します。最低でも事前にHost、Instance、Catalog、LoginModeプロパティに値を代入して下さい</para></summary>
+ <param name="SelectSql">SELECT文</param>
+ <returns>DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.DataAdapter(System.String,AdoNetDesktopSqlSvr.DatapSqlSvr.pPropertySet)">
+ <summary>与えられたSELECT文でSqlDataAdapterクラスで読み取り、DataTableで返します(外部設定ファイルを使わずに接続)
+ <para>※このメソッドの構造体引数で接続します</para></summary>
+ <param name="SelectSql">SELECT文</param>
+ <param name="pSettei">接続文字列のパラメータ(構造体)</param>
+ <returns>DataTable</returns>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.DataReader(System.String)">
+ <summary>与えられたSELECT文でSqlCommandクラスのExecuteReaderメソッドを実行しIEnumerable(Of IDictionary(Of 列名, 値))で返します</summary>
+ <param name="SelectSql">SELECT文</param>
+ <returns>IEnumerable(Of IDictionary(Of String, String))</returns>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.DataReader``1(System.String)">
+ <summary>与えられたSELECT文でSqlCommandクラスのExecuteReaderメソッドを実行しIEnumerable(Of T型)で返します</summary>
+ <typeparam name="DTO">ジェネリクスT型</typeparam>
+ <param name="SelectSql">SELECT文</param>
+ <returns>IEnumerable(Of DTO)</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.DataReaderDirect(System.String)">
+ <summary>与えられたSELECT文でSqlCommandクラスのExecuteReaderメソッドを実行しDataReaderで返します</summary>
+ <param name="SelectSql">SELECT文</param>
+ <returns>SqlDataReader</returns>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.DrClose">
+ <summary>SqlDataReaderを閉じます</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.Scalar(System.String)">
+ <summary>与えられたSELECT文でSqlCommandクラスのExecuteScalarメソッドを実行しIntegerで返します</summary>
+ <param name="ScalarSql">SELECT COUNT(*)文</param>
+ <returns>Integer</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.ParametersClear">
+ <summary>クラス内のSqlCommandクラスのパラメータをクリアーします</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.SetParameters(System.String,System.Data.SqlDbType,System.Int32,System.Object)">
+ <summary>クラス内のSqlCommandによるパラメータの作成と値を代入します</summary>
+ <param name="name">パラメータ名</param>
+ <param name="type">パラメータ型</param>
+ <param name="size">サイズ</param>
+ <param name="value">値</param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.NonQuery(System.String)">
+ <summary>与えられた更新系コマンド文でクラス内のSqlCommandクラスによるExecuteNonQueryメソッドを実行します</summary>
+ <param name="LoSql">INSERT,UPDATE,DELETE,CREATE,ALTER,DROP文</param>
+ <returns>更新による影響を受けた件数</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.NonQuery(System.String,System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlTransaction)">
+ <summary>与えられた更新系コマンド文でSqlCommandクラスのExecuteNonQueryメソッドを実行します</summary>
+ <param name="LoSql">INSERT,UPDATE,DELETE,CREATE,ALTER,DROP文</param>
+ <param name="LoCmd">SqlCommand</param>
+ <param name="LoTrans">SqlTransaction</param>
+ <returns>更新による影響を受けた件数</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.GoTransaction">
+ <summary>BeginTransactionメソッドでトランザクションを開始し、SqlTransactionで返します</summary>
+ <returns>SqlTransaction</returns>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.TransactionCommit(System.Data.SqlClient.SqlTransaction)">
+ <summary>与えられたトランザクションをコミットします</summary>
+ <param name="Trans">開始されているトランザクション</param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.DatapSqlSvr.TransactionRollback(System.Data.SqlClient.SqlTransaction)">
+ <summary>与えられたトランザクションをロールバックします</summary>
+ <param name="Trans">開始されているトランザクション</param>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.DatapSqlSvr.Conec">
+ <summary>SqlConnection読み出し</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.DatapSqlSvr.ConecSb">
+ <summary>SqlConnectionStringBuilder読み出し</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.DatapSqlSvr.DataSource">
+ <summary>サーバー名\インスタンス名</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.DatapSqlSvr.LoginMode">
+ <summary>Windows統合認証=True、SQLServer認証=False</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.DatapSqlSvr.ConnectTimeout">
+ <summary>SQLServer接続タイムアウト設定(秒)</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.DatapSqlSvr.MultipleActiveResultSets">
+ <summary>SQLServerでMultipleActiveResultSetsを使用する=True、使用しない=False</summary>
+ <returns></returns>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.FileSupportSqlSvr">
+ <summary>Microsoft SQLServerに接続するための設定値を外部ファイルから取得する支援クラス</summary>
+ <remarks>参照の追加
+ System.Xml.dll
+ System.Runtime.Serialization.dll</remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.Open(System.String,System.String)">
+ <summary>Microsoft SQLServerに外部設定ファイルを使って接続します</summary>
+ <param name="pSetPath">外部設定ファイルのフォルダ階層</param>
+ <param name="pSetFile">外部設定ファイルのフォルダ名</param>
+ <returns>True=OK、False=ファイル無しエラー</returns>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.Create">
+ <summary>標準的な内容で目的のファイルを作成します
+ <para>※Openメソッドを実行した引数で作成</para></summary>
+ <returns>True=OK、False=ファイル無しエラー</returns>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.Create(System.String,System.String)">
+ <summary>標準的な内容で目的のファイルを作成します</summary>
+ <returns>True=OK、False=ファイル無しエラー</returns>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.AccessorSet">
+ <summary>外部設定ファイルからの設定値を読み込みます</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.SerializeDefaultData">
+ <summary>外部設定ファイルが無い場合、標準的な内容で作成するための値を書き込みます</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.Serialize">
+ <summary>XMLファイルへシリアル化し標準的な内容で書き込みます</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.FileSupportSqlSvr.Deserialize">
+ <summary>XMLファイルを逆シリアル化し読み込みます</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.Form1.ButtonQuery_Click(System.Object,System.EventArgs)">
+ <summary>商品を全件表示します。</summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.Form1.ButtonInsert_Click(System.Object,System.EventArgs)">
+ <summary>テキストボックスによる内容で商品を追加します。</summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.Form1.ButtonUpdate_Click(System.Object,System.EventArgs)">
+ <summary>商品ID(NumId)による商品の更新を行います。</summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.Form1.ButtonDelete_Click(System.Object,System.EventArgs)">
+ <summary>商品ID(NumId)による商品を削除します。</summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.LastException">
+ <summary>最新の例外格納クラス</summary>
+ <remarks></remarks>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.LastException.SetLastException(System.String,System.String,System.Exception)">
+ <summary>最新の例外情報をセットします</summary>
+ <param name="method">例外のメソッド名</param>
+ <param name="param">例外の発生したメソッドが引き受けた引数、参考値など</param>
+ <param name="ex">Exceptionまたは派生クラス</param>
+</member>
+<member name="M:AdoNetDesktopSqlSvr.LastException.LogWrite">
+ <summary>例外ログの書き込み</summary>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.LastException.LastExcepTitle">
+ <summary>最新の例外のクラス名が格納されます</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.LastException.LastExcepPlace">
+ <summary>最新の例外のメソッド名が格納されます</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.LastException.LastExcepParam">
+ <summary>最新の例外のパラメータが格納されます
+ <para>(メソッドに与えた引数や参考になる情報など)</para></summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.LastException.LastExcepMessage">
+ <summary>最新の例外のメッセージが格納されます</summary>
+ <returns></returns>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.LastException.LastExcepTrace">
+ <summary>最新の例外のスタックトレースが格納されます</summary>
+ <returns></returns>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.NetDatabase">
+ <summary>ADO.NET基底クラス</summary>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.NetDatabase.Host">
+ <summary>ホスト名(サーバー名)またはIPアドレス</summary>
+ <returns></returns>
+ <remarks>サーバー／クライアント型のみ必要</remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.NetDatabase.Instance">
+ <summary>インスタンス名</summary>
+ <returns></returns>
+ <remarks>サーバー／クライアント型のみ必要</remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.NetDatabase.Port">
+ <summary>ネットワーク ポート番号</summary>
+ <returns></returns>
+ <remarks>サーバー／クライアント型のみ必要</remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.NetDatabase.Catalog">
+ <summary>データベース名</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.NetDatabase.UserID">
+ <summary>ログインユーザー名</summary>
+ <returns></returns>
+ <remarks>OS統合認証の場合は必要ありません</remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.NetDatabase.Password">
+ <summary>ログインパスワード</summary>
+ <returns></returns>
+ <remarks>パスワード認証が無い場合は必要ありません</remarks>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.ShohinDto">
+ <summary>Data Transfer Object(DTO)クラス</summary>
+ <remarks></remarks>
+</member>
+<member name="T:AdoNetDesktopSqlSvr.SqlSvrInfo">
+ <summary>Microsoft SQLServerと接続のための設定値格納</summary>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvHost">
+ <summary>ホスト名(サーバー名)</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvInstance">
+ <summary>インスタンス名</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvPort">
+ <summary>ポート(ローカルホストの場合は自動的に無効とします)</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvCatalog">
+ <summary>データベース名</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvLoginMode">
+ <summary>認証モード(Windows統合認証=true、SQLServer認証=false)</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvUserID">
+ <summary>SQLServer ユーザーID</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvPassword">
+ <summary>SQLServer パスワード</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvConnectTimeout">
+ <summary>オープン時の接続タイムアウト(秒単位)</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:AdoNetDesktopSqlSvr.SqlSvrInfo.MssqlSvMARS">
+ <summary>MultipleActiveResultSetsを使用するか</summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

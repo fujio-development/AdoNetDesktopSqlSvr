@@ -1,0 +1,11 @@
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\bin\Debug\AdoNetDesktopSqlSvr.exe.config
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\bin\Debug\AdoNetDesktopSqlSvr.exe
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\bin\Debug\AdoNetDesktopSqlSvr.pdb
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\bin\Debug\AdoNetDesktopSqlSvr.xml
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.Form1.resources
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.Resources.resources
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.vbproj.GenerateResource.cache
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.vbproj.CoreCompileInputs.cache
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.exe
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.xml
+C:\Workspace\DotNet\AdoNetDesktopSqlSvr\AdoNetDesktopSqlSvr\obj\Debug\AdoNetDesktopSqlSvr.pdb
