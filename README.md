@@ -6,7 +6,7 @@ ___
 言語：Visual Basic .NET 16.0  
 デスクトップ：Windows Formsアプリケーション
 デベロッパーSDK：.NET Framework 4.8 SDK  
-データベース：Microsoft SQLServer 2019 Express CU6  
+データベース：Microsoft SQLServer 2019 Express CU7  
 -データベース管理ツール：Microsoft SQL Server Management Studio 18.6
 データベース接続：.NET Framework Data Provider for SQL Server  
 ```
